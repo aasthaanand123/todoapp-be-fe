@@ -9,4 +9,6 @@ app.get("/items", controller.getItems);
 app.post("/item", controller.postItem);
 mongoose
   .connect("mongodb://127.0.0.1:27017/todoDBreact")
-  .then(app.listen(console.log(`server is started at http://localhost:5454`)));
+  .then(() =>
+    app.listen(5454, console.log(`server is started at http://localhost:5454`))
+  );

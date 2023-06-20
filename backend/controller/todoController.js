@@ -6,7 +6,7 @@ module.exports.getItems = async (req, res) => {
     // let todos = await todoModel.find({});
     res.send(todosList);
   } catch (err) {
-    console.log(err);
+    res.send(err);
   }
 };
 module.exports.postItem = async (req, res) => {
@@ -17,6 +17,6 @@ module.exports.postItem = async (req, res) => {
     //redirect request to get all items
     res.redirect("/items");
   } catch (err) {
-    console.log(err);
+    res.send(err);
   }
 };
